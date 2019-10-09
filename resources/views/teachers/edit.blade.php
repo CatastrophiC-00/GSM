@@ -1,5 +1,4 @@
 @extends('layouts.master')
-@extends('layouts.nav')
 @section('content')
 	<div class="container">
 		<form method="POST" action="/home/teachers/{{ $teacher->id }}/update">

@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function() {
 	Route::get('/home/strands', 'StrandsController@strand');
 	Route::get('/home/subjectstrands', 'SubjectStrandsController@subjectstrand');
 	Route::get('/home/subjects/add', 'EnrolController@create');
+	Route::get('/home/subjectstrands/add', 'SubjectStrandsController@create');
 	Route::get('/home/sections/add', 'SectionsController@create');
 	Route::get('/home/teachers/add', 'TeachersController@create');
 	Route::get('/home/sections/{section}/edit', 'SectionsController@edit');
@@ -40,4 +41,5 @@ Route::middleware('auth')->group(function() {
 	Route::post('/home/sections/store', 'SectionsController@store');
 	Route::post('/home/teachers/store', 'TeachersController@store');
 	Route::post('/home/strands/store', 'StrandsController@store');
+	Route::post('/home/subjectstrands/store', 'SubjectStrandsController@store');
 });
