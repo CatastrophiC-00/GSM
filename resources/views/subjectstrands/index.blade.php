@@ -17,8 +17,8 @@
 				@foreach($subjectstrands as $subjectstrand)
 					<tr>
 						<td>{{ $subjectstrand->id }}</td>
-						<td>{{ $subjectstrand->subject->name}}</td>
-						<td>{{ $subjectstrand->strand->name}}</td>
+						<td>{{ $subjectstrand->subject_id}}</td>
+						<td>{{ $subjectstrand->strand_id}}</td>
 						<td>{{ $subjectstrand->semester }}</td>
 						<td>{{ $subjectstrand->grade_level }}</td>
 						<td><a href="/home/subjectstrands/{{$subjectstrand->id}}/edit">Edit</a></td>

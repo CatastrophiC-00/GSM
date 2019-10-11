@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
 	<div class="container">
-		@include('layouts.errors')
-		<form method="POST" action="/home/subjectstrands/store">
-			@csrf
+		<form method="POST" action="/home/subjectstrands/{{ $subjectstrand->id }}/update">
+		@csrf
+		 <input name='id' type='hidden' value='{{ $subjectstrand->id }}'>
 			<div class="form-group">
 		    <label for="subject">Subject</label>
 			  <select name='subject_id' class='form-control'>
@@ -32,6 +32,7 @@
 		    <label for="Grade Level">Grade Level</label>
 		    <input type="text" class="form-control" name="grade_level">
 		  </div>
+		<br>
 		  <button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>

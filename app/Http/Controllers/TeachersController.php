@@ -40,6 +40,9 @@ class TeachersController extends Controller
 
     public function update(Teacher $teacher)
     {
+        request()->validate([
+            'advisory_section' => 'required',
+        ]);
         $teacher->advisory_section = request()->advisory_section;
         $teacher->save();
         return redirect('/home/teachers');
